@@ -1,8 +1,3 @@
-from mailbox import NotEmptyError
-
-from pkg_resources import ensure_directory
-
-
 class Pessoa(object):
 
     def __init__(self, nome, endereco, cpf, rg, estado_civil, profissao, nacionalidade, data_de_nascimento):
@@ -14,3 +9,12 @@ class Pessoa(object):
         self.profissao = profissao 
         self.nacionalidade = nacionalidade 
         self.data_de_nascimento = data_de_nascimento 
+
+    def __str__(self):
+        return """ 
+    Nome : {nome}
+    CPF: {cpf}
+    Data de Nascimento: {data_de_nascimento}
+    """.format(   nome = self.nome
+                , cpf = self.cpf 
+                , data_de_nascimento = self.data_de_nascimento)
