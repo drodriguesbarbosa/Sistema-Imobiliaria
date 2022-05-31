@@ -9,11 +9,11 @@ class Casa(Imovel):
         self.segurancaRua = segurancaRua
 
     def __str__(self):
-            return""" 
-            Portão: {portao}
-            Código Imóvel: {codigo_imovel}
-            Segurança da Rua: {segurancaRua}
-            """.format(   portao = self.portao
-                        , codigo_imovel = self.codigo_imovel 
-                        , segurancaRua = self.segurancaRua)
+        return """ 
+    Portão: {portao}
+    Código Imóvel: {codigo_imovel}
+    Segurança da Rua: {segurancaRua}
+    """.format(   portao = self.portao
+                , codigo_imovel = self.codigo_imovel 
+                , segurancaRua = self.segurancaRua)
                         
