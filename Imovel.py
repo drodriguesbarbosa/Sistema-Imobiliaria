@@ -1,18 +1,17 @@
 class Imovel (object):
-    def __init__(self, codigo_imovel, endereco, codigo_locatario, metragem, qtdQuarto, qtdSala, qtsCozinha, qtdSuite, qtdBanheiro, qtdVaga, qtdVaranda, churrasqueira, piscina):
-        self.codigo_imovel = codigo_imovel
-        self.endereco = endereco
-        self.codigo_locatario = codigo_locatario
-        self.metragem = metragem
-        self.qtdQuarto = qtdQuarto
-        self.qtdSala = qtdSala
-        self.qtsCozinha = qtsCozinha
-        self.qtdSuite = qtdSuite
-        self.qtdBanheiro = qtdBanheiro
-        self.qtdVaga = qtdVaga
-        self.qtdVaranda = qtdVaranda
-        self.churrasqueira = churrasqueira
-        self.piscina = piscina
+    def __init__(self, codigo_imovel, endereco, metragem, qtdQuarto, qtdSala, qtdCozinha, qtdSuite, qtdBanheiro, qtdVaga, qtdVaranda, churrasqueira, piscina):
+        self._codigo_imovel = codigo_imovel
+        self._endereco = endereco
+        self._metragem = metragem
+        self._qtdQuarto = qtdQuarto
+        self._qtdSala = qtdSala
+        self._qtdCozinha = qtdCozinha
+        self._qtdSuite = qtdSuite
+        self._qtdBanheiro = qtdBanheiro
+        self._qtdVaga = qtdVaga
+        self._qtdVaranda = qtdVaranda
+        self._churrasqueira = churrasqueira
+        self._piscina = piscina
 
 
     def __str__(self):
@@ -24,5 +23,112 @@ class Imovel (object):
                     , codigo_imovel = self.codigo_imovel 
                     , metragem = self.metragem)
 
+    @property
+    def codigo_imovel(self):
+        return self._codigo_imovel
 
+    @codigo_imovel.setter
+    def codigo_imovel(self, codigo_imovel):
+        self._codigo_imovel = codigo_imovel
+        return True
 
+    @property
+    def endereco(self):
+        return self._endereco
+
+    @endereco.setter
+    def endereco(self, endereco):
+        self._endereco = endereco
+        return True
+
+    @property
+    def metragem(self):
+        return self._metragem
+
+    @metragem.setter
+    def metragem(self, metragem):
+        self._metragem = metragem
+        return True
+ 
+    @property
+    def qtdQuarto(self):
+        return self._qtdQuarto
+    
+    @qtdQuarto.setter
+    def qtdQuarto(self, qtdQuarto):
+        self._qtdQuarto = qtdQuarto
+        return True
+
+    @property
+    def qtdSala(self):
+        return self._qtdSala
+
+    @qtdSala.setter
+    def qtdSala(self, qtdSala):
+        self._qtdSala = qtdSala
+        return True
+    
+    @property
+    def qtdCozinha(self):
+        return self._qtdCozinha
+
+    @qtdCozinha.setter
+    def qtdCozinha(self, qtdCozinha):
+        self._qtdCozinha = qtdCozinha
+        return True
+    
+    @property
+    def qtdSuite(self):
+        return self._qtdSuite
+
+    @qtdSuite.setter
+    def qtdSuite(self, qtdSuite):
+        self._qtdSuite = qtdSuite
+        return True
+
+    @property
+    def qtdBanheiro(self):
+        return self._qtdBanheiro
+
+    @qtdBanheiro.setter
+    def qtdBanheiro(self, qtdBanheiro):
+        self._qtdBanheiro = qtdBanheiro
+        return True
+
+    @property
+    def qtdVaga(self):
+        return self._qtdVaga
+
+    @qtdVaga.setter
+    def qtdVaga(self, qtdVaga):
+        self._qtdVaga = qtdVaga
+        return True
+    
+    @property
+    def qtdVaranda(self):
+        return self._qtdVaranda
+
+    @qtdVaranda.setter
+    def qtdVaranda(self, qtdVaranda):
+        self._qtdVaranda = qtdVaranda
+        return True
+    
+    @property
+    def churrasqueira(self):
+        return self._churrasqueira
+
+    @churrasqueira.setter
+    def churrasqueira(self, churrasqueira):
+        self._churrasqueira = churrasqueira
+        return True
+
+    @property
+    def piscina(self):
+        return self._piscina
+
+    @piscina.setter
+    def piscina(self, piscina):
+        self._piscina = piscina
+        return True
+
+    
