@@ -19,4 +19,7 @@ print(imovel1.codigo_imovel)
 imovel1.codigo_imovel = 2011
 print(imovel1.codigo_imovel)
 
+locatario1 = Locatario('Joao', 'R teste', '5555554', '5454451', 'Solteiro', 'teste', 'brasileiro', '20/06/1994', 2017)
+print(locatario1._endereco)
+
 
