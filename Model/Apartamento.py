@@ -16,12 +16,12 @@ class Apartamento(Imovel):
 
     def __str__(self):
         return """ 
-    Porteiro: {porteiro}
-    Andar: {andar}
-    Academia: {academia}
-    """.format(   porteiro = self.porteiro
-                , andar = self.andar 
-                , academia = self.academia)
+Permite animais: {permiteAnimais}
+Salão de festas: {salaoDeFesta}
+Número do apartamento: {numApartamento}
+    """.format(   permiteAnimais = self.permiteAnimais
+                , salaoDeFesta = self.salaoDeFesta 
+                , numApartamento = self.numApartamento)
 
     @property
     def porteiro (self):
@@ -43,7 +43,7 @@ class Apartamento(Imovel):
 
     @property
     def permiteAnimais (self):
-        return self.permiteAnimais
+        return self._permiteAnimais
 
     @permiteAnimais.setter
     def permiteAnimais (self, permiteAnimais):
@@ -52,7 +52,7 @@ class Apartamento(Imovel):
 
     @property
     def andar (self):
-        return self.andar
+        return self._andar
 
     @andar.setter
     def andar (self, andar):
@@ -61,7 +61,7 @@ class Apartamento(Imovel):
     
     @property
     def qtdElevador (self):
-        return self.qtdElevador
+        return self._qtdElevador
 
     @qtdElevador.setter
     def qtdElevador (self, qtdElevador):
@@ -70,7 +70,7 @@ class Apartamento(Imovel):
 
     @property
     def numApartamento (self):
-        return self.numApartamento
+        return self._numApartamento
 
     @numApartamento.setter
     def numApartamento (self, numApartamento):
@@ -79,7 +79,7 @@ class Apartamento(Imovel):
 
     @property
     def bloco (self):
-        return self.bloco
+        return self._bloco
 
     @bloco.setter
     def bloco (self, bloco):
@@ -88,7 +88,7 @@ class Apartamento(Imovel):
 
     @property
     def playground (self):
-        return self.playground
+        return self._playground
 
     @playground.setter
     def playground (self, playground):
@@ -97,7 +97,7 @@ class Apartamento(Imovel):
 
     @property
     def salaoDeFesta (self):
-        return self.salaoDeFesta
+        return self._salaoDeFesta
 
     @salaoDeFesta.setter
     def salaoDeFesta (self, salaoDeFesta):
@@ -106,7 +106,7 @@ class Apartamento(Imovel):
 
     @property
     def academia (self):
-        return self.academia
+        return self._academia
 
     @academia.setter
     def academia (self, academia):

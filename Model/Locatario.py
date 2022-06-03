@@ -18,7 +18,7 @@ class Locatario(Pessoa):
        
     @property
     def codigo_do_locatario (self):
-        return self.codigo_do_locatario
+        return self._codigo_do_locatario
 
     @codigo_do_locatario.setter
     def codigo_do_locatario (self, codigo_do_locatario):

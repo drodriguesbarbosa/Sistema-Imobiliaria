@@ -24,7 +24,7 @@ class Locacao():
     
     @property
     def duracao (self):
-        return self.duracao
+        return self._duracao
 
     @duracao.setter
     def duracao (self, duracao):
@@ -33,7 +33,7 @@ class Locacao():
 
     @property
     def valorAluguel (self):
-        return self.valorAluguel
+        return self._valorAluguel
 
     @valorAluguel.setter
     def valorAluguel (self, valorAluguel):
@@ -42,7 +42,7 @@ class Locacao():
 
     @property
     def dtPagamento (self):
-        return self.dtPagamento
+        return self._dtPagamento
 
     @dtPagamento.setter
     def dtPagamento (self, dtPagamento):
@@ -51,7 +51,7 @@ class Locacao():
 
     @property
     def multaMora (self):
-        return self.multaMora
+        return self._multaMora
 
     @multaMora.setter
     def multaMora (self, multaMora):
@@ -60,7 +60,7 @@ class Locacao():
 
     @property
     def locador (self):
-        return self.locador
+        return self._locador
 
     @locador.setter
     def locador (self, locador):
@@ -69,7 +69,7 @@ class Locacao():
 
     @property
     def imovel (self):
-        return self.imovel
+        return self._imovel
 
     @imovel.setter
     def imovel (self, imovel):
