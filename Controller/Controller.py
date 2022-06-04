@@ -1,4 +1,7 @@
+from Model.Imovel import Imovel
+from Model.Locacao import Locacao
 from Model.Locador import Locador
+from Model.Locatario import Locatario
 
 
 class Controler():
@@ -39,7 +42,7 @@ class Controler():
         for item in self.lista_de_locadores:
             if codigo_locador == self.lista_de_locadores:
                 print(item)
-                print ('Insira as informações a seguir sobre o locatários que deseja cadastrar: ')
+                print ('Insira as informações a seguir sobre o locatário que deseja atualizar: ')
                 nome = input ('Nome: ')
                 endereco = input ('Endereço: ')
                 cpf = input ('CPF: ')
@@ -49,10 +52,139 @@ class Controler():
                 nacionalidade = input ('Nacionalidade: ' )
                 data_de_nascimento = input ('Data de nascimento: ')
                 codigo_do_locador = input ('Código do locador: ')
-
-# Solicitar aqui todas as informacoes do cadastro, e atualizar os atributos com os valores novos
-
                 break
 
 
 
+#FUNÇÕES DE IMÓVEL
+    def cadastro_de_imoveis (self):
+        print ('Insira as informações a seguir sobre os imóveis que deseja cadastrar: ')
+        codigo_imovel = input ('Código do imóvel: ')
+        endereco = input ('Endereço: ')
+        metragem = input ('Metragem: ')
+        qtdQuarto = input ('Quantidade de quartos: ')
+        qtdSala = input ('Quantidade de salas: ')
+        qtdCozinha = input ('Quantidade de cozinhas')
+        qtdSuite = input ('Quantidade de suítes: ')
+        qtdBanheiro = input ('Quantidade de banheiros: ')
+        qtdVaga = input ('Quantidade de Vagas: ')
+        qtdVaranda = input ('Quantidade de varandas: ')
+        churrasqueira = input ('Churrasqueira? Sim/Não ')
+        piscina = input ('Piscina? Sim/Não: ')
+
+        imovel1 = Imovel(codigo_imovel, endereco, metragem, qtdQuarto, qtdSala, qtdCozinha, qtdSuite, qtdBanheiro, qtdVaga, qtdVaranda, churrasqueira, piscina)
+        self.lista_de_imoveis.append (imovel1)
+
+    def mostrar_todos_imoveis (self):
+        for item in self.lista_de_imoveis:
+            print('- Codigo:' + str(item.codigo_imovel + '\n - Endereço: '+ str(item.endereco)))
+
+    def pesquisar_imoveis (self):
+        codigo_imovel = input ('Insira o código do imóvel: ')
+        for item in self.lista_de_imoveis:
+            if codigo_imovel == self.lista_de_imoveis:
+                print (item)
+                break 
+                
+    def atualizar_imoveis (self):
+        codigo_imovel = input('Digite o codigo do Imóvel que deseja alterar')
+        for item in self.lista_de_imoveis:
+            if codigo_imovel == self.lista_de_imoveis:
+                print(item)
+                print ('Insira as informações a seguir sobre o imóvel que deseja atualizar: ')
+                codigo_imovel = input ('Código do imóvel: ')
+                endereco = input ('Endereço: ')
+                metragem = input ('Metragem: ')
+                qtdQuarto = input ('Quantidade de quartos: ')
+                qtdSala = input ('Quantidade de salas: ')
+                qtdCozinha = input ('Quantidade de cozinhas')
+                qtdSuite = input ('Quantidade de suítes: ')
+                qtdBanheiro = input ('Quantidade de banheiros: ')
+                qtdVaga = input ('Quantidade de Vagas: ')
+                qtdVaranda = input ('Quantidade de varandas: ')
+                churrasqueira = input ('Churrasqueira? Sim/Não ')
+                piscina = input ('Piscina? Sim/Não: ')
+                break
+
+#FUNÇÕES DE LOCATARIOS
+
+    def cadastro_de_locatarios (self):
+        print ('Insira as informações a seguir sobre os locatários que deseja cadastrar: ')
+        nome = input ('Nome: ')
+        endereco = input ('Endereço: ')
+        cpf = input ('Endereço: ')
+        rg = input ('RG: ')
+        estado_civil = input ('Estado civi: ')
+        profissao = input ('Profissão: ')
+        nacionalidade = input ('Nacionalidade: ')
+        data_de_nascimento = input ('Data de Nascimento, ex. 00/00/0000: ')
+        codigo_do_locatario = input ('Código do locatário: ')
+
+        locatario1 = Locatario(nome, endereco, cpf, rg, estado_civil, profissao, nacionalidade, data_de_nascimento, codigo_do_locatario)
+        self.lista_de_locatarios.append (locatario1)
+
+    def mostrar_todos_locatarios (self):
+        for item in self.lista_de_locatarios:
+            print('- Codigo:' + str(item.codigo_do_locatario + '\n - Nome: '+ str(item.nome)))
+
+    def pesquisar_locatarios (self):
+        codigo_do_locatario = input ('Insira o código do locatário: ')
+        for item in self.lista_de_locatarios:
+            if codigo_do_locatario == self.lista_de_locatarios:
+                print (item)
+                break 
+                
+    def atualizar_locatario (self):
+        codigo_do_locatario = input('Digite o codigo do Locatário que deseja alterar')
+        for item in self.lista_de_locatarios:
+            if codigo_do_locatario == self.lista_de_locatarios:
+                print(item)
+                print ('Insira as informações a seguir sobre o locatário que deseja atualizar: ')
+                nome = input ('Nome: ')
+                endereco = input ('Endereço: ')
+                cpf = input ('Endereço: ')
+                rg = input ('RG: ')
+                estado_civil = input ('Estado civi: ')
+                profissao = input ('Profissão: ')
+                nacionalidade = input ('Nacionalidade: ')
+                data_de_nascimento = input ('Data de Nascimento, ex. 00/00/0000: ')
+                codigo_do_locatario = input ('Código do locatário: ')
+                break
+
+#FUNÇÕES DE LOCAÇÕES
+    def cadastro_de_locacoes (self):
+        print ('Insira as informações a seguir sobre as locações que deseja cadastrar: ')
+        imovel = input ('Casa ou apartamento: ')
+        duracao = input ('Duração do contrato: ')
+        valorAluguel = input ('Valor do aluguel: ')
+        dtPagamento = input ('Data de pagamento: ')
+        multaMora = input ('Valor da multa: ')
+        locador = input ('Digite o código do locador: ')
+
+        locacao1 = Locacao (imovel, duracao, valorAluguel, dtPagamento, multaMora, locador)
+        self.lista_de_locacoes.append (locacao1)
+
+    def mostrar_todas_locacoes (self):
+        for item in self.lista_de_locacoes:
+            print('- Imóvel:' + str(item.imovel + '\n - Valor do aluguel: '+ str(item.valorAluguel)))
+
+    def pesquisar_locacoes (self):
+        locador = input ('Insira o código do locatário: ')
+        for item in self.lista_de_locacoes:
+            if locador == self.lista_de_locacoes:
+                print (item)
+                break 
+                
+    def atualizar_locacoes (self):
+        locador = input('Digite o codigo do Locador que deseja alterar')
+        for item in self.lista_de_locadores:
+            if locador == self.lista_de_locacoes:
+                print(item)
+                print ('Insira as informações a seguir sobre a locacao que deseja atualizar: ')
+                imovel = input ('Casa ou apartamento: ')
+                duracao = input ('Duração do contrato: ')
+                valorAluguel = input ('Valor do aluguel: ')
+                dtPagamento = input ('Data de pagamento: ')
+                multaMora = input ('Valor da multa: ')
+                locador = input ('Digite o código do locador: ')
+                break
