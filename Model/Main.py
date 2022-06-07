@@ -36,4 +36,5 @@ locatario1 = Locatario('Joao', 'R teste', '5555554', '5454451', 'Solteiro', 'tes
 print(locatario1._endereco)
 
 
-
+locatario1._endereco = ('testando')
+print (locatario1._endereco)

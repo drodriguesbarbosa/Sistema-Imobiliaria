@@ -181,7 +181,7 @@ class Controler():
             if locador == self.lista_de_locacoes:
                 print(item)
                 print ('Insira as informações a seguir sobre a locacao que deseja atualizar: ')
-                imovel = input ('Casa ou apartamento: ')
+                locacao1._imovel = input ('Digite o imovel: ')
                 duracao = input ('Duração do contrato: ')
                 valorAluguel = input ('Valor do aluguel: ')
                 dtPagamento = input ('Data de pagamento: ')
