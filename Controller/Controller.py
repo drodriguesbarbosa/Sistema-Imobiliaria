@@ -31,16 +31,16 @@ class Controler():
             print('- Codigo:' + str(item.codigo_locador + '\n - Nome: '+ str(item.nome)))
 
     def pesquisar_locador (self):
-        codigo_locador = input ('Insira o código do locador: ')
+        codigo_locador_pesquisar = input ('Insira o código do locador: ')
         for item in self.lista_de_locadores:
-            if codigo_locador == self.lista_de_locadores:
+            if codigo_locador_pesquisar == self.lista_de_locadores:
                 print (item)
                 break 
                 
     def atualizar_locador(self):
-        codigo_locador = input('digite o codigo do locador que deseja alterar')
+        codigo_locador_atualizar = input('digite o codigo do locador que deseja alterar')
         for item in self.lista_de_locadores:
-            if codigo_locador == self.lista_de_locadores:
+            if codigo_locador_atualizar == self.lista_de_locadores:
                 print(item)
                 print ('Insira as informações a seguir sobre o locatário que deseja atualizar: ')
                 nome = input ('Nome: ')
@@ -80,16 +80,16 @@ class Controler():
             print('- Codigo:' + str(item.codigo_imovel + '\n - Endereço: '+ str(item.endereco)))
 
     def pesquisar_imoveis (self):
-        codigo_imovel = input ('Insira o código do imóvel: ')
+        codigo_imovel_pesquisar = input ('Insira o código do imóvel: ')
         for item in self.lista_de_imoveis:
-            if codigo_imovel == self.lista_de_imoveis:
+            if codigo_imovel_pesquisar == self.lista_de_imoveis:
                 print (item)
                 break 
                 
     def atualizar_imoveis (self):
-        codigo_imovel = input('Digite o codigo do Imóvel que deseja alterar')
+        codigo_imovel_atualizar = input('Digite o codigo do Imóvel que deseja alterar')
         for item in self.lista_de_imoveis:
-            if codigo_imovel == self.lista_de_imoveis:
+            if codigo_imovel_atualizar == self.lista_de_imoveis:
                 print(item)
                 print ('Insira as informações a seguir sobre o imóvel que deseja atualizar: ')
                 codigo_imovel = input ('Código do imóvel: ')
@@ -128,16 +128,16 @@ class Controler():
             print('- Codigo:' + str(item.codigo_do_locatario + '\n - Nome: '+ str(item.nome)))
 
     def pesquisar_locatarios (self):
-        codigo_do_locatario = input ('Insira o código do locatário: ')
+        codigo_locatario_pesquisar = input ('Insira o código do locatário: ')
         for item in self.lista_de_locatarios:
-            if codigo_do_locatario == self.lista_de_locatarios:
+            if codigo_locatario_pesquisar == self.lista_de_locatarios:
                 print (item)
                 break 
                 
     def atualizar_locatario (self):
-        codigo_do_locatario = input('Digite o codigo do Locatário que deseja alterar')
+        codigo_do_locatario_atualizar = input('Digite o codigo do Locatário que deseja alterar')
         for item in self.lista_de_locatarios:
-            if codigo_do_locatario == self.lista_de_locatarios:
+            if codigo_do_locatario_atualizar == self.lista_de_locatarios:
                 print(item)
                 print ('Insira as informações a seguir sobre o locatário que deseja atualizar: ')
                 nome = input ('Nome: ')
@@ -169,22 +169,128 @@ class Controler():
             print('- Imóvel:' + str(item.imovel + '\n - Valor do aluguel: '+ str(item.valorAluguel)))
 
     def pesquisar_locacoes (self):
-        locador = input ('Insira o código do locatário: ')
+        locacao_pesquisar = input ('Insira o código do locatário: ')
         for item in self.lista_de_locacoes:
-            if locador == self.lista_de_locacoes:
+            if locacao_pesquisar == self.lista_de_locacoes:
                 print (item)
                 break 
                 
     def atualizar_locacoes (self):
-        locador = input('Digite o codigo do Locador que deseja alterar')
+        locacao_altuaizar = input('Digite o codigo do Locador que deseja alterar')
         for item in self.lista_de_locadores:
-            if locador == self.lista_de_locacoes:
+            if locacao_altuaizar == self.lista_de_locacoes:
                 print(item)
                 print ('Insira as informações a seguir sobre a locacao que deseja atualizar: ')
-                locacao1._imovel = input ('Digite o imovel: ')
+                imovel = input ('Digite o imovel: ')
                 duracao = input ('Duração do contrato: ')
                 valorAluguel = input ('Valor do aluguel: ')
                 dtPagamento = input ('Data de pagamento: ')
                 multaMora = input ('Valor da multa: ')
                 locador = input ('Digite o código do locador: ')
                 break
+
+#cadastrar_mostrar_pesquisar_atualizar_Locatários#
+    def menu_locatario (opcao_locatario):
+        try:
+            if opcao_locatario == 1:
+                cadastro_de_locatarios(self)
+            elif opcao_locatario == 2:
+                mostrar_todos_locatarios(self)
+            elif opcao_locatario == 3:
+                pesquisar_locatarios(self)  
+            elif opcao_locatario == 4:
+                atualizar_locatario(self)
+            elif opcao_locatario == 5:
+                switch(opcao_menu)
+            elif opcao_locatario == 6:
+                print('Sistema Finalizado!')
+            else:
+                print('Opção inválida')
+            return True
+        except Exception as ex:
+            print('Erro durante seleção de opções: ' + str(ex))
+            return False   
+        
+    def menu_locadores (opcao_locador):
+        try:
+            if opcao_locador == 1:
+                cadastro_de_locadores(self)
+            elif opcao_locador == 2:
+                mostrar_todos_locadores(self)
+            elif opcao_locador == 3:
+                pesquisar_locadores(self)  
+            elif opcao_locador == 4:
+                atualizar_locadores(self)
+            elif opcao_locador == 5:
+                switch(opcao_menu)
+            elif opcao_locador == 6:
+                print('Sistema Finalizado!')
+            else:
+                print('Opção inválida')
+            return True
+        except Exception as ex:
+            print('Erro durante seleção de opções: ' + str(ex))
+            return False   
+            
+    def menu_locacoes (opcao_locacoes):
+        try:
+            if opcao_locacoes == 1:
+                cadastro_de_locacoes(self)
+            elif opcao_locacoes == 2:
+                mostrar_todas_locacoes(self)
+            elif opcao_locacoes == 3:
+                pesquisar_locacoes(self)  
+            elif opcao_locacoes == 4:
+                atualizar_locacoes(self)
+            elif opcao_locacoes == 5:
+                switch(opcao_menu)
+            elif opcao_locacoes == 6:
+                print('Sistema Finalizado!')
+            else:
+                print('Opção inválida')
+            return True
+        except Exception as ex:
+            print('Erro durante seleção de opções: ' + str(ex))
+            return False 
+            
+     def menu_imoveis (opcao_imoveis):
+        try:
+            if opcao_imoveis == 1:
+                cadastro_de_imoveis(self)
+            elif opcao_imoveis == 2:
+                mostrar_todos_imoveis(self)
+            elif opcao_imoveis == 3:
+                pesquisar_imoveis(self)  
+            elif opcao_imoveis == 4:
+                atualizar_imoveis(self)
+            elif opcao_imoveis == 5:
+                switch(opcao_menu)
+            elif opcao_imoveis == 6:
+                print('Sistema Finalizado!')
+            else:
+                print('Opção inválida')
+            return True
+        except Exception as ex:
+            print('Erro durante seleção de opções: ' + str(ex))
+            return False 
+
+    def switch (opcao_menu):
+        try:
+            if opcao_menu == 1:
+                menu_locatario
+            elif opcao_menu == 2:
+                menu_locadores(opcao_locador)
+            elif opcao_menu == 3:
+                menu_locacoes(opcao_locacoes)
+            elif opcao_menu == 4:
+                menu_imoveis(opcao_imovel)
+            elif opcao_menu == 5:
+                print  ('Sitema finalizado!')
+            else:
+                print('Opção inválida')
+            return True
+        except Exception as ex:
+            print('Erro durante seleção de opções: ' + str(ex))
+            return False  
+
+    
