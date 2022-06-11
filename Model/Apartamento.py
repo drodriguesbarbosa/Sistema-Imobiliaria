@@ -16,12 +16,50 @@ class Apartamento(Imovel):
 
     def __str__(self):
         return """ 
+Código do imóvel: {codigo_imovel}
+Endereço: {endereco}
+Metragem: {metragem}
+Quartos: {qtdQuarto}
+Sala: {qtdSala}
+Cozinha: {qtdCozinha}
+Suítes:{qtdSuite}
+Banheiros: {qtdBanheiro}
+Vagas na garagem: {qtdVaga}
+Varanda: {qtdVaranda}
+Churrasqueira: {churrasqueira}
+Piscina: {piscina}
+Porteiro: {porteiro}
+Apartamentos por andar: {apPorAndar}
 Permite animais: {permiteAnimais}
-Salão de festas: {salaoDeFesta}
+Andar: {andar}
+Elevadores: {qtdElevador}
 Número do apartamento: {numApartamento}
-    """.format(   permiteAnimais = self.permiteAnimais
+Bloco: {bloco}
+Playground: {playground}
+Salão de festa: {salaoDeFesta}
+Academia: {academia}
+    """.format(   codigo_imovel = self.codigo_imovel
+                , endereco = self.endereco
+                , metragem = self.metragem
+                , qtdQuarto = self.qtdQuarto
+                , qtdSala = self.qtdSala
+                , qtdCozinha = self.qtdCozinha
+                , qtdSuite = self.qtdSuite
+                , qtdBanheiro = self.qtdBanheiro
+                , qtdVaga = self.qtdVaga
+                , qtdVaranda = self.qtdVaranda
+                , churrasqueira = self.churrasqueira
+                , piscina = self.piscina
+                , porteiro = self.porteiro
+                , apPorAndar = self.apPorAndar
+                , permiteAnimais = self.permiteAnimais
+                , andar = self.andar
+                , qtdElevador = self.qtdElevador
+                , numApartamento = self.numApartamento
+                , bloco = self.bloco
+                , playground = self.playground
                 , salaoDeFesta = self.salaoDeFesta 
-                , numApartamento = self.numApartamento)
+                , academia = self.academia)
 
     @property
     def porteiro (self):

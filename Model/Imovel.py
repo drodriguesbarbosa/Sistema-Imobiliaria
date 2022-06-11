@@ -16,12 +16,30 @@ class Imovel (object):
 
     def __str__(self):
          return""" 
-        Endereço: {endereco}
-        Código Imóvel: {codigo_imovel}
+        Código do imóvel: {codigo_imovel}
+        Endereço:  {endereco}
         Metragem: {metragem}
-        """.format(   endereco = self.endereco
-                    , codigo_imovel = self.codigo_imovel 
-                    , metragem = self.metragem)
+        Quartos: {qtdQuarto}
+        Sala: {qtdSala}
+        Cozinha: {qtdCozinha}
+        Suíte: {qtdSuite}
+        Banheiro: {qtdBanheiro}
+        Número de vagas: {qtdVaga}
+        Varanda: {qtdVaranda}
+        Churrasqueira: {churrasqueira}
+        Piscina: {piscina}
+        """.format(   codigo_imovel =  self.codigo_imovel
+                    , endereco = self.endereco 
+                    , metragem = self.metragem
+                    , qtdQuarto = self.qtdQuarto
+                    , qtdSala = self.qtdSala
+                    , qtdCozinha = self.qtdCozinha
+                    , qtdSuite = self.qtdSuite
+                    , qtdBanheiro = self.qtdBanheiro
+                    , qtdVaga = self.qtdVaga
+                    , qtdVaranda = self.qtdVaranda
+                    , churrasqueira = self.churrasqueira
+                    , piscina = self.piscina)
 
     @property
     def codigo_imovel(self):

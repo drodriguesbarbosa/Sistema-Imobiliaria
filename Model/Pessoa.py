@@ -13,10 +13,20 @@ class Pessoa(object):
     def __str__(self):
         return """ 
     Nome : {nome}
+    Endereço: {endereco}
     CPF: {cpf}
+    RG: {rg}
+    Estado civil: {estado_civil}
+    Profissão: {profissao}
+    Nacionalidade: {nacionalidade}
     Data de Nascimento: {data_de_nascimento}
     """.format(   nome = self.nome
+                , endereco = self.endereco
                 , cpf = self.cpf 
+                , rg = self.rg
+                , estado_civil = self.estado_civil
+                , profissao = self.profissao
+                , nacionalidade = self.nacionalidade
                 , data_de_nascimento = self.data_de_nascimento)
 
     

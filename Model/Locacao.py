@@ -14,12 +14,18 @@ class Locacao():
 
     def __str__(self):
         return """ 
-    Duração do contrato : {duracao}
-    Multa Mora: {multaMora}
     Imóvel: {imovel}
-    """.format(   duracao = self.duracao
+    Duração do contrato : {duracao}
+    Valor do aluguel: {valorAluguel}
+    Data de pagamento: {dtPagamento}
+    Multa Mora: {multaMora}
+    Locador: {locador}
+    """.format(   imovel = self.imovel
+                , duracao = self.duracao
+                , valorAluguel = self.valorAluguel
+                , dtPagamento = self.dtPagamento
                 , multaMora = self.multaMora 
-                , imovel = self.imovel)
+                , locador = self.locador)
 
     
     @property

@@ -10,12 +10,26 @@ class Locador(Pessoa):
     
     def __str__(self):
         return """ 
-Código do locador : {codigo_do_locador}
-CPF: {cpf}
-Nacionalidade: {nacionalidade}
-    """.format(   codigo_do_locador = self._codigo_do_locador
+    Nome: {nome}
+    Código de locador: {codigo_do_locador}
+    Endereço: {endereco}
+    CPF: {cpf}
+    RG: {rg}
+    Estado civil: {estado_civil}
+    Profissão: {profissao}
+    Nacionalidade: {nacionalidade}
+    Data de nascimento: {data_de_nascimento}
+    Lista de imóveis: {lista_de_imoveis}
+    """.format(   nome = self.nome
+                , codigo_do_locador = self._codigo_do_locador
+                , endereco = self.endereco
                 , cpf = self.cpf 
-                , nacionalidade = self.nacionalidade)
+                , rg = self.rg
+                , estado_civil = self.estado_civil
+                , profissao = self.profissao
+                , nacionalidade = self.nacionalidade
+                , data_de_nascimento = self.data_de_nascimento
+                , lista_de_imoveis = self.lista_de_imoveis)
 
     @property
     def codigo_do_locador (self):
