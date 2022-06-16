@@ -1,4 +1,4 @@
-from Imovel import Imovel
+from Model.Imovel import Imovel
 
 class Apartamento(Imovel):
     def __init__(self, codigo_imovel, endereco, metragem, qtdQuarto, qtdSala, qtsCozinha, qtdSuite, qtdBanheiro, qtdVaga, qtdVaranda, churrasqueira, piscina, porteiro, apPorAndar, permiteAnimais, andar, qtdElevador, numApartamento, bloco, playground, salaoDeFesta, academia):

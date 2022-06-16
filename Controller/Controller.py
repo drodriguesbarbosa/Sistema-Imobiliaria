@@ -52,6 +52,7 @@ class Controler():
                 nacionalidade = input ('Nacionalidade: ' )
                 data_de_nascimento = input ('Data de nascimento: ')
                 codigo_do_locador = input ('Código do locador: ')
+
                 break
 
 

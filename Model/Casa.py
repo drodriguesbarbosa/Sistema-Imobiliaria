@@ -1,4 +1,4 @@
-from Imovel import Imovel
+from Model.Imovel import Imovel
 
 class Casa(Imovel):
     def __init__(self, codigo_imovel, endereco, metragem, qtdQuarto, qtdSala, qtdCozinha, qtdSuite, qtdBanheiro, qtdVaga, qtdVaranda, churrasqueira, piscina, portao, quintal, alarme, segurancaRua):

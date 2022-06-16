@@ -1,5 +1,5 @@
-from Locador import Locador
-from Imovel import Imovel
+from Model.Locador import Locador
+from Model.Imovel import Imovel
 
 
 class Locacao():
