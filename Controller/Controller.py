@@ -52,7 +52,15 @@ class Controler():
                 nacionalidade = input ('Nacionalidade: ' )
                 data_de_nascimento = input ('Data de nascimento: ')
                 codigo_do_locador = input ('Código do locador: ')
-
+                item.nome = nome
+                item.endereco = endereco
+                item.cpf = cpf
+                item.rg = rg
+                item.estado_civil = estado_civil
+                item.profissao = profissao
+                item.nacionalidade = nacionalidade
+                item.data_de_nascimento= data_de_nascimento
+                item.codigo_do_locador = codigo_do_locador
                 break
 
 
@@ -105,6 +113,18 @@ class Controler():
                 qtdVaranda = input ('Quantidade de varandas: ')
                 churrasqueira = input ('Churrasqueira? Sim/Não ')
                 piscina = input ('Piscina? Sim/Não: ')
+                item.codigo_imovel = codigo_imovel
+                item.endereco = endereco
+                item.metragem = metragem
+                item.qtdQuarto = qtdQuarto
+                item.qtdSala = qtdSala
+                item.qtdCozinha = qtdCozinha
+                item.qtdSuite = qtdSuite
+                item.qtdBanheiro = qtdBanheiro
+                item.qtdVaga = qtdVaga
+                item.qtdVaranda = qtdVaranda
+                item.churrasqueira = churrasqueira
+                item.piscina = piscina
                 break
 
 #FUNÇÕES DE LOCATARIOS
@@ -150,6 +170,15 @@ class Controler():
                 nacionalidade = input ('Nacionalidade: ')
                 data_de_nascimento = input ('Data de Nascimento, ex. 00/00/0000: ')
                 codigo_do_locatario = input ('Código do locatário: ')
+                item.nome = nome
+                item.endereco = endereco
+                item.cpf = cpf
+                item.rg = rg
+                item.estado_civil = estado_civil
+                item.profissao = profissao
+                item.nacionalidade = nacionalidade
+                item.data_de_nascimento = data_de_nascimento
+                item.codigo_do_locatario = codigo_do_locatario
                 break
 
 #FUNÇÕES DE LOCAÇÕES
@@ -188,4 +217,10 @@ class Controler():
                 dtPagamento = input ('Data de pagamento: ')
                 multaMora = input ('Valor da multa: ')
                 locador = input ('Digite o código do locador: ')
+                item.imovel = imovel
+                item.duracao = duracao
+                item.valorAluguel = valorAluguel
+                item.dtPagamento = dtPagamento
+                item.multaMora = multaMora
+                item.locador = locador
                 break

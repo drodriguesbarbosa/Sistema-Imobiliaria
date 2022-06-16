@@ -122,8 +122,17 @@ Selecione uma das opções para prosseguir:
             elif opcao == 5:
                   finalizar = input('Você deseja finalizar? (S/N): ')
                   if finalizar == 'S':
-                        print('Sistema finalizado! Obrigada por utilizar a Imobiliária Mais1Code!')
-                  opcao_menu = True
+                        print("""
+***************************************************
+Imobiliária Mais1Code - Sistema de gerenciamento.
+
+Sistema finalizado! Obrigada por utilizar a Imobiliária Mais1Code!
+
+***************************************************
+""")
+                        opcao_menu = True
+                  elif finalizar == 'N':
+                        opcao_menu = False
             else:
                   print('Opção inválida!')
       
